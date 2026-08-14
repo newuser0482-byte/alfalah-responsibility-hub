@@ -1,0 +1,88 @@
+{
+  "nadeem": {
+    "name": "Nadeem Ahmad Bhat",
+    "role": "RTO / Accounts",
+    "tasks": [
+      "Complete VAHAN work",
+      "Maintain AFM & AFI accounts",
+      "Prepare GST for CA",
+      "Mission YUVA",
+      "Attendance"
+    ]
+  },
+  "ruhi": {
+    "name": "Ruhi Aziz",
+    "role": "CRM",
+    "tasks": [
+      "Customer follow-up",
+      "Booking updates",
+      "Recovery follow-up"
+    ]
+  },
+  "talib": {
+    "name": "Talib Muzaffar",
+    "role": "Sales Manager",
+    "tasks": [
+      "Lead sales team",
+      "Daily targets",
+      "Customer meetings"
+    ]
+  },
+  "faizan": {
+    "name": "Faizan Feroz",
+    "role": "Service Manager",
+    "tasks": [
+      "Workshop management",
+      "Quality checks"
+    ]
+  },
+  "zakir": {
+    "name": "Zakir Ahmad Ganie",
+    "role": "Head Technician",
+    "tasks": [
+      "Repair supervision"
+    ]
+  },
+  "waseem": {
+    "name": "Waseem Ahmad Bohru",
+    "role": "Senior Technician",
+    "tasks": [
+      "Vehicle repairs"
+    ]
+  },
+  "altaf": {
+    "name": "Altaf Ahmad",
+    "role": "Office Boy",
+    "tasks": [
+      "Office support"
+    ]
+  },
+  "ishfaq": {
+    "name": "Ishfaq Ahmad",
+    "role": "General Manager",
+    "tasks": [
+      "Overall operations"
+    ]
+  },
+  "murtaza": {
+    "name": "Murtaza Rashid",
+    "role": "Spare Parts In-Charge",
+    "tasks": [
+      "Inventory management"
+    ]
+  },
+  "ubaid": {
+    "name": "Ubaid Hussain Dar",
+    "role": "Sales Executive",
+    "tasks": [
+      "Customer dealing"
+    ]
+  },
+  "rashid": {
+    "name": "Rashid Bhat",
+    "role": "Sales Executive",
+    "tasks": [
+      "Sales follow-up"
+    ]
+  }
+}

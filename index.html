@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AL-FALAH MOTORS - Staff Responsibility Hub</title>
+<style>
+body{font-family:Arial;margin:0;background:#eef4ff}
+.header{background:#0A4FB3;color:#fff;padding:24px;text-align:center;border-radius:0 0 24px 24px}
+.container{padding:16px}
+.search{width:100%;padding:12px;border:none;border-radius:12px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.card{background:#fff;padding:16px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer;text-align:center}
+.page{display:none;background:#fff;padding:18px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.btn{background:#0A4FB3;color:#fff;border:none;padding:10px 16px;border-radius:10px}
+</style>
+</head>
+<body>
+<div class="header"><h2>AL-FALAH MOTORS</h2><p>Staff Responsibility Hub</p></div>
+<div class="container">
+<input id="search" class="search" placeholder="Search your name..." oninput="filterCards()">
+<div id="cards" class="grid"></div>
+<div id="page" class="page"></div>
+</div>
+<script>
+let data={};
+fetch("employees.json").then(r=>r.json()).then(d=>{
+ data=d;
+ const cards=document.getElementById("cards");
+ for(const k in d){
+   const e=d[k];
+   const c=document.createElement("div");
+   c.className="card";
+   c.dataset.name=e.name.toLowerCase();
+   c.innerHTML=`<div style="width:48px;height:48px;border-radius:50%;background:#0A4FB3;color:white;display:flex;align-items:center;justify-content:center;margin:auto;font-size:22px">${e.name[0]}</div><b>${e.name.split(" ")[0]}</b><div style="font-size:12px;color:#666">${e.role}</div>`;
+   c.onclick=()=>show(k);
+   cards.appendChild(c);
+ }
+});
+function show(id){
+ const e=data[id];
+ let html=`<h2>${e.name}</h2><h4>${e.role}</h4><ul>`;
+ e.tasks.forEach(t=>html+=`<li>${t}</li>`);
+ html+=`</ul><button class="btn" onclick="back()">Back</button>`;
+ document.getElementById("cards").style.display="none";
+ document.getElementById("search").style.display="none";
+ document.getElementById("page").innerHTML=html;
+ document.getElementById("page").style.display="block";
+}
+function back(){
+ document.getElementById("page").style.display="none";
+ document.getElementById("cards").style.display="grid";
+ document.getElementById("search").style.display="block";
+}
+function filterCards(){
+ const q=document.getElementById("search").value.toLowerCase();
+ document.querySelectorAll(".card").forEach(c=>c.style.display=c.dataset.name.includes(q)?"block":"none");
+}
+</script>
+</body>
+</html>
