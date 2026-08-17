@@ -2,12 +2,15 @@
   "nadeem": {
     "name": "Nadeem Ahmad Bhat",
     "role": "RTO & Accounts",
-    "tasks": [
-      "Complete VAHAN work",
-      "Maintain AFM & AFI accounts",
-      "Prepare GST for CA",
-      "Mission YUVA",
-      "Attendance"
+    "tasks":
+    "Complete VAHAN",
+        "Maintain Accounts of AFM & AFI on Vyapar",
+    "Match dealership account Statements with Vyapar every month",
+"Prepare GST data and submit to CA",
+"Send sales documents & monthly bank statements",
+"Process activity bills, claims of Greaves MLR",
+"Mission Yuva Apply / Attendence"
+
     ]
   },
   "ruhi": {
